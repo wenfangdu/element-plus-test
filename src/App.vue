@@ -1,6 +1,14 @@
 <script setup lang="ts">
+import { ElMessage } from 'element-plus'
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+
+const showMessage = () => {
+  ElMessage({
+    message: 'Element Plus 集成成功！',
+    type: 'success',
+  })
+}
 </script>
 
 <template>
@@ -9,6 +17,10 @@ import TheWelcome from './components/TheWelcome.vue'
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
+      <el-button type="primary" @click="showMessage">
+        <el-icon><Check /></el-icon>
+        点击测试
+      </el-button>
     </div>
   </header>
 
