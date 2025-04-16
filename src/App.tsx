@@ -1,5 +1,5 @@
 import { defineComponent, Fragment } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElButton, ElMessage } from 'element-plus'
 import { Check } from '@element-plus/icons-vue'
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
@@ -29,10 +29,10 @@ export default defineComponent({
 
           <div class="wrapper">
             <HelloWorld msg="You did it!" />
-            <el-button type="primary" onClick={showMessage}>
+            <ElButton type="primary" onClick={showMessage}>
               <el-icon><Check /></el-icon>
               点击测试
-            </el-button>
+            </ElButton>
           </div>
         </header>
 
