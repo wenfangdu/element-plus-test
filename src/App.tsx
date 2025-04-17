@@ -44,7 +44,7 @@ export default defineComponent({
         </header>
 
         <main>
-          <TheWelcome />
+          {/* <TheWelcome /> */}
           <div style={{ padding: '20px' }}>
             <h2>水果列表</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '20px' }}>
