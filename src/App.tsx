@@ -51,7 +51,7 @@ export default defineComponent({
               }}
             >
               {fruits.map((fruit) => (
-                <ElCard shadow="hover">
+                <ElCard key={fruit.id} shadow="hover">
                   {{
                     default: () => (
                       <div>
