@@ -11,18 +11,16 @@ import pluginReact from 'eslint-plugin-react'
 
 export default defineConfigWithVueTs(
   pluginReact.configs.flat.recommended,
+  pluginReact.configs.flat['jsx-runtime'],
+  globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
+  pluginVue.configs['flat/essential'],
+  vueTsConfigs.recommended,
+  skipFormatting,
   {
     name: 'app/files-to-lint',
     files: ['**/*.{ts,mts,tsx,vue}'],
     rules: {
-      'react/react-in-jsx-scope': 'off',
       'react/no-unknown-property': ['error', { ignore: ['class'] }],
     },
   },
-
-  globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
-
-  pluginVue.configs['flat/essential'],
-  vueTsConfigs.recommended,
-  skipFormatting,
 )
