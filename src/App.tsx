@@ -21,6 +21,7 @@ export default defineComponent({
         message: 'Element Plus 集成成功！',
         type: 'success',
       })
+      ElMessage.error('错误消息')
     }
 
     return () => (
